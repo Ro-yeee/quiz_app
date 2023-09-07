@@ -13,16 +13,14 @@ function App() {
       .then(res => res.json())
         .then(data => setTest(data.results))
   },[])
-
-  console.log(test)
-  console.log(answers)
+  
   return (
     <div className='mainContainer'>
       <QuestionCard 
         quiz={test[currentindex]}
         answers={answers}
         setAnswers={setAnswers} 
-        index={currentindex} 
+        currentIndex={currentindex} 
         setIndex={setCurrentIndex}
         length={test.length}
         score={score}
