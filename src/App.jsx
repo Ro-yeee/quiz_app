@@ -5,6 +5,8 @@ import QuestionCard from './components/QuestionCard/QuestionCard'
 function App() {
   const [test,setTest] = useState([])
   const [currentindex,setCurrentIndex] = useState(0)
+  const [answers,setAnswers] = useState([])
+  const [score,setScore] = useState(0)
 
   useEffect(()=>{
     fetch("https://opentdb.com/api.php?amount=10")
@@ -13,13 +15,18 @@ function App() {
   },[])
 
   console.log(test)
+  console.log(answers)
   return (
     <div className='mainContainer'>
       <QuestionCard 
-        quiz={test[currentindex]} 
+        quiz={test[currentindex]}
+        answers={answers}
+        setAnswers={setAnswers} 
         index={currentindex} 
         setIndex={setCurrentIndex}
-        length={test.length} />
+        length={test.length}
+        score={score}
+        setScore={setScore} />
     </div>
   )
 }

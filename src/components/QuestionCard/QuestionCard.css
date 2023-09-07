@@ -24,3 +24,14 @@
     width: 100%;
     cursor: pointer;
 }
+
+.controls{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls > button{
+    cursor: pointer;
+}
