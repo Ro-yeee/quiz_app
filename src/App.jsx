@@ -13,7 +13,7 @@ function App() {
       .then(res => res.json())
         .then(data => setTest(data.results))
   },[])
-  
+
   return (
     <div className='mainContainer'>
       <QuestionCard 

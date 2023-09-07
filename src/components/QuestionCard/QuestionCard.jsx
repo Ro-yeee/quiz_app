@@ -59,6 +59,9 @@ function QuestionCard({quiz,answers,setAnswers,currentIndex,setIndex,length,scor
             Next
         </button>
       </div>
+     {
+        answers[length-1] && <h1>Quiz Finished</h1>
+     }
     </div>
   )
 }
